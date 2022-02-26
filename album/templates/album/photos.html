@@ -10,6 +10,7 @@
 <p>No images available</p>
 {% else %}
 {% for image in images %}
+<img src="{{ image.image.url}}">
 <p>{{image.name}}</p>
 {% endfor %}
 {% endif %}

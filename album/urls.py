@@ -4,6 +4,7 @@ from .views import *
 
 
 urlpatterns = [
-  path('', photos, name="photos" )
+  path('', photos, name="photos"),
+  path('save-image/', save_image, name="save_image"),
 
 ]

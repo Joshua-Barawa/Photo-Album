@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if not images %}
+<p>No images available</p>
+{% else %}
+{% for image in images %}
+<p>{{image.name}}</p>
+{% endfor %}
+{% endif %}
+
+
+</body>
+</html>

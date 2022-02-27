@@ -22,6 +22,8 @@ def save_image(request):
         return HttpResponseRedirect("/")
     else:
         form = ImageForm()
+        context['form'] = form
+        return render(request, "album/photo_form.html", context)
     return render(request, "album/photo_form.html",context)
 
 

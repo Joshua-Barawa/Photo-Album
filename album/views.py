@@ -34,7 +34,7 @@ def delete_image(request, id):
 
 def get_image_by_id(request, id):
     image = Image.objects.get(pk=id)
-    return render(request, "album/photo_form.html", {"image" : image})
+    return render(request, "album/photo.html", {"image" : image})
 
 
 

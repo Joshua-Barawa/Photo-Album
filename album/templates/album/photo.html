@@ -5,15 +5,16 @@
 {% block content %}
 
 <div class="user-repo">
-     <p class="heading">{{post.title}}</p>
-     <img class="image" src="{{ url_for('static',filename='images/' + post.image)}}" alt="post-pic">
-           <p>{{post.description}}</p>
+     <p class="heading">{{image.name}}</p>
+     <img class="image" src="{{ image.image.url}}" alt="post-pic">
+           <p>{{image.description}}</p>
            <div id="other">
            </div>
-          <span class="posted">Posted By: {{post.owner}}</span>
-          <span class="posted">Owner Mobile Number: {{current_user.mobile_number}}</span>
-          <span class="posted">Price/month: ksh{{post.price}}</span><br>
-          <a href="/" class="btn btn-primary">Return</a>
+          <span class="posted">Location: {{image.location}}</span>
+          <span class="posted">Category: {{image.category}}</span>
+          <button>Copy Image Link</button><br>
+          <a href="update/{{image.id}}" class="btn btn-primary">Update</a>
+          <a href="delete/{{image.id}}" class="btn btn-danger">Delete</a>
         </div>`
 
 

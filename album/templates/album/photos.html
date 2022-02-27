@@ -32,7 +32,7 @@
            </div>
      <div class="bottom">
         <p class="h">{{image.name}}</p>
-          <a class="read-more" href="get-image/{{image.id}}">more details</a>
+          <a class="read-more" href="/get-image/{{image.id}}">more details</a>
         </div>
         </div>`
 {%endfor %}
@@ -41,6 +41,7 @@
 
 
 {% else %}
+<div class="repos">
 {% for image in images %}
 <div class="user-repo">
     <img class="image" src="{{ image.image.url}}" alt="blog-pic">
@@ -50,11 +51,11 @@
            </div>
      <div class="bottom">
         <p class="h">{{image.name}}</p>
-          <a class="read-more" href="get-image/{{image.id}}">more details</a>
+          <a class="read-more" href="/get-image/{{image.id}}">more details</a>
         </div>
         </div>`
 {% endfor %}
-
+</div>
  {% endif %}
 
 

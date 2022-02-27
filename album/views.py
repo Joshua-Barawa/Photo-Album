@@ -56,7 +56,7 @@ def filter_by_location(request, id):
 def search_image(request):
     if request.method == "POST":
         search = request.POST["search"]
-        images = Image.objects.filter(category_id=search)
+        images = Image.objects.filter(category=search)
         locations = Location.objects.all()
         return render(request, "album/photos.html", {"search": search, "images": images, "locations": locations})
     return render(request, "album/image_form.html", {})

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'album/navbar.css' %}">
+    {% block css %}{% endblock %}
+</head>
+<body>
+
+<div class="nav">
+    <a href="/" class="logo">Photo-Album</a>
+
+<ul class="links">
+     <li class="link"><a href='save-image/'>Add-Image</a></li>
+</ul>
+</div>
+
+{% block content %}
+{% endblock %}

@@ -1,25 +1,30 @@
+{% extends 'album/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static 'album/photos.css' %}" />
-</head>
-<body>
-<div class="hero">
+{% block css %}<link rel="stylesheet" href="{% static 'album/photos.css' %}">{% endblock  %}
 
+{% block content %}
+
+<div id="repos">
 {% if not images %}
 <p>No images available</p>
 {% else %}
 {% for image in images %}
-<div class="object">
-<img class="image" src="{{ image.image.url}}">
-<p>{{image.name}}</p>
+<div class="user-repo">
+    <img class="image" src="{{ image.image.url}}" alt="blog-pic">
+     <div id="other">
+           <p class="l">Location: {{image.location}}</p>
+           <p class="d">Category: {{image.category}}</p>
+           </div>
+     <div class="bottom">
+        <p class="h">{{image.name}}</p>
+          <a id="read-more" href="/post/{{post.id}}">more details</a>
+        </div>
+        </div>`
+{%endfor %}
+    {% endif %}
 </div>
-{% endfor %}
-{% endif %}
 
-</div>
 </body>
 </html>
+
+{% endblock %}

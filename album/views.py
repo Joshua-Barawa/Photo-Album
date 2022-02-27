@@ -48,7 +48,7 @@ def update_image(request, id):
 
 
 def filter_by_location(request, id):
-    images = Image.objects.filter(pk=id)
+    images = Image.objects.filter(location=id)
     locations = Location.objects.all()
     return render(request, "album/photos.html", {"images": images, "locations": locations})
 

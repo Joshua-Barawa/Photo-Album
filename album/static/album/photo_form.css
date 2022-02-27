@@ -1,0 +1,43 @@
+   .main{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+text-align: center;
+margin:auto;
+margin-top: 100px;
+min-height: 400px;
+border-radius:10px;
+max-width: 600px;
+min-width:auto;
+}
+h1{
+    padding: 10px 0px;
+    font-size:25px;
+}
+ #email, #password, #name, #email, #full_names, #mobile_number{
+    width:80%;
+    padding:5px 7px;
+    margin-bottom:20px;
+    border-radius:5px;
+    border:none;
+    border:1px solid #ccc;
+}
+#submit{
+    border:none;
+    padding:7px 60px;
+    margin:20px 0px;
+    background-color: #357EC7;
+    color:white;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align:center;
+
+}
+#image:focus, #name:focus, #description:focus, #location:focus, #category:focus{
+    outline: none;
+}
+#submit{
+    font-weight: bold;
+}
+#error{
+     color:red;
+     font-size: 12px;
+}

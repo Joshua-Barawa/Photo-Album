@@ -10,6 +10,6 @@ urlpatterns = [
   path('get-image/<int:id>/', get_image_by_id, name="get_image"),
   path('update-image/<int:id>/', update_image, name="update_image"),
   path('location/<int:id>/', filter_by_location, name="filter_by_location"),
-  path("category/<str:name>", search_image, name="search_image")
+  path("category/", search_image, name="search_image")
 
 ]

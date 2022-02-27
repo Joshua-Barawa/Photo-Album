@@ -47,12 +47,18 @@ def update_image(request, id):
     return render(request, "album/photo_update.html", {"image": image, "form": form})
 
 
-def search_image(request, category):
-    images = Image.objects.filter(category=category)
-    return render(request, "album/image_form.html", {"images": images})
-
-
 def filter_by_location(request, id):
     images = Image.objects.filter(pk=id)
     locations = Location.objects.all()
     return render(request, "album/photos.html", {"images": images, "locations": locations})
+
+
+def search_image(request):
+    if request.method == "POST":
+        search = request.POST["search"]
+        images = Image.objects.filter(category_id=search)
+        locations = Location.objects.all()
+        return render(request, "album/photos.html", {"search": search, "images": images, "locations": locations})
+    return render(request, "album/image_form.html", {})
+
+

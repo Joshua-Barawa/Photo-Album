@@ -18,7 +18,7 @@
   </div>
 </div>
 
-
+{% if not search %}
 <div id="repos">
 {% if not images %}
 <p>No images available</p>
@@ -26,18 +26,37 @@
 {% for image in images %}
 <div class="user-repo">
     <img class="image" src="{{ image.image.url}}" alt="blog-pic">
-     <div id="other">
+     <div class="other">
            <p class="l">Location: {{image.location}}</p>
            <p class="d">Category: {{image.category}}</p>
            </div>
      <div class="bottom">
         <p class="h">{{image.name}}</p>
-          <a id="read-more" href="get-image/{{image.id}}">more details</a>
+          <a class="read-more" href="get-image/{{image.id}}">more details</a>
         </div>
         </div>`
 {%endfor %}
     {% endif %}
 </div>
+
+
+{% else %}
+{% for image in images %}
+<div class="user-repo">
+    <img class="image" src="{{ image.image.url}}" alt="blog-pic">
+     <div class="other">
+           <p class="l">Location: {{image.location}}</p>
+           <p class="d">Category: {{image.category}}</p>
+           </div>
+     <div class="bottom">
+        <p class="h">{{image.name}}</p>
+          <a class="read-more" href="get-image/{{image.id}}">more details</a>
+        </div>
+        </div>`
+{% endfor %}
+
+ {% endif %}
+
 
 </body>
 </html>

@@ -9,4 +9,5 @@ urlpatterns = [
   path('delete-image/<int:id>/', delete_image, name="delete_image"),
   path('get-image/<int:id>/', get_image_by_id, name="get_image"),
 
+
 ]

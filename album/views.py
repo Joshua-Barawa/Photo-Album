@@ -27,15 +27,14 @@ def save_image(request):
     return render(request, "album/photo_form.html",context)
 
 
+def get_image_by_id(request, id):
+    image = Image.objects.get(pk=id)
+    return render(request, "album/photo.html", {"image": image})
+
+
 def delete_image(request, id):
     Image.objects.filter(pk=id).delete()
     return HttpResponseRedirect("/")
-
-
-def get_image_by_id(request, id):
-    image = Image.objects.get(pk=id)
-    return render(request, "album/photo.html", {"image" : image})
-
 
 
 def update_image(request, id):

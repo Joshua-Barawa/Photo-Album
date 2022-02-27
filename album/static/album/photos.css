@@ -1,0 +1,13 @@
+
+.hero{
+display:flex;
+flex-wrap:wrap;
+}
+
+.object{
+width:30%;
+}
+
+.image{
+width:100%;
+}

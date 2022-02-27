@@ -1,20 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'album/photos.css' %}" />
 </head>
 <body>
+<div class="hero">
 
 {% if not images %}
 <p>No images available</p>
 {% else %}
 {% for image in images %}
-<img src="{{ image.image.url}}">
+<div class="object">
+<img class="image" src="{{ image.image.url}}">
 <p>{{image.name}}</p>
+</div>
 {% endfor %}
 {% endif %}
 
-
+</div>
 </body>
 </html>

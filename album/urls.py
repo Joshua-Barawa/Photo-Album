@@ -8,6 +8,7 @@ urlpatterns = [
   path('save-image/', save_image, name="save_image"),
   path('delete-image/<int:id>/', delete_image, name="delete_image"),
   path('get-image/<int:id>/', get_image_by_id, name="get_image"),
+  path('update-image/<int:id>/', update_image, name="update_image"),
 
 
 ]

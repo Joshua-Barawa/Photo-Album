@@ -38,12 +38,17 @@ def delete_image(request, id):
 
 
 def update_image(request, id):
-    return HttpResponse("Hello update age")
+    image = Image.objects.get(pk=id)
+    form = ImageForm(request.POST or None, instance=image)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect("/")
+    return render(request, "album/photo_update.html", {"image":image, "form":form})
 
 
 def search_image(request, category):
     images = Image.objects.filter(category=category)
-    return render(request, "album/photo_form.html", {"images": images})
+    return render(request, "album/image_form.html", {"images": images})
 
 
 def filter_by_location(request, location):

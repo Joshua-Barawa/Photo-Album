@@ -9,8 +9,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 def photos(request):
     images = Image.objects.all()
-    categories = Category.objects.all()
-    return render(request, "album/photos.html", {"images": images, "categories": categories})
+    locations = Location.objects.all()
+    return render(request, "album/photos.html", {"images": images, "locations": locations})
 
 
 def save_image(request):
@@ -52,6 +52,7 @@ def search_image(request, category):
     return render(request, "album/image_form.html", {"images": images})
 
 
-def filter_by_location(request, location):
-    images = Image.objects.filter(location=location)
-    return render(request, "album/photo_form.html", {"images" : images})
+def filter_by_location(request, id):
+    images = Image.objects.filter(pk=id)
+    locations = Location.objects.all()
+    return render(request, "album/photos.html", {"images": images, "locations": locations})

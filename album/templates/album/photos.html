@@ -6,14 +6,14 @@
 
 
   <div class="dropdown show">
-  Filter By Category <a class="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Filter By Location <a class="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    All
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="">All</a>
-      {% for category in categories %}
-    <a class="dropdown-item" href="/{{category.name}}">{{category.name}}</a>
+    <a class="dropdown-item" href="/">All</a>
+      {% for location in locations %}
+    <a class="dropdown-item" href="/location/{{location.id}}">{{location.name}}</a>
       {% endfor %}
   </div>
 </div>

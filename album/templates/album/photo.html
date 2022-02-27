@@ -1,0 +1,23 @@
+{% extends 'album/base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'album/photo.css' %}">{% endblock  %}
+
+{% block content %}
+
+<div class="user-repo">
+     <p class="heading">{{post.title}}</p>
+     <img class="image" src="{{ url_for('static',filename='images/' + post.image)}}" alt="post-pic">
+           <p>{{post.description}}</p>
+           <div id="other">
+           </div>
+          <span class="posted">Posted By: {{post.owner}}</span>
+          <span class="posted">Owner Mobile Number: {{current_user.mobile_number}}</span>
+          <span class="posted">Price/month: ksh{{post.price}}</span><br>
+          <a href="/" class="btn btn-primary">Return</a>
+        </div>`
+
+
+</body>
+</html>
+
+{% endblock %}

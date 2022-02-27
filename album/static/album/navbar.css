@@ -13,20 +13,27 @@ color:#fff;
 padding: 0px 5%;
 font-size:25px;
 text-decoration:none;
+color:#fff;
 }
 
-.nav .links{
+.links{
+display: flex;
+justify-content: space-between;
+}
+
+.nav-link{
 display: inline-flex;
 padding: 0px 5%;
 color:#fff;
 text-decoration:none;
+list-style-type:none;
+font-weight:bold;
 }
 
-.links .link{
+.links .nav-item{
    margin-right: 30px;
    text-decoration: none;
    font-size: 21px;
    list-style-type:none;
    color:#fff;
-   text-decoration:none;
 }

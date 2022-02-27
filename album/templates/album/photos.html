@@ -19,7 +19,7 @@
 </div>
 
 {% if not search %}
-<div id="repos">
+<div class="repos">
 {% if not images %}
 <p>No images available</p>
 {% else %}
@@ -32,7 +32,7 @@
            </div>
      <div class="bottom">
         <p class="h">{{image.name}}</p>
-          <a class="read-more" href="/get-image/{{image.id}}">more details</a>
+          <a class="btn btn-primary" href="/get-image/{{image.id}}">More details</a>
         </div>
         </div>`
 {%endfor %}

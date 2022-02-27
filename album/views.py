@@ -43,7 +43,7 @@ def update_image(request, id):
     if form.is_valid():
         form.save()
         return HttpResponseRedirect("/")
-    return render(request, "album/photo_update.html", {"image":image, "form":form})
+    return render(request, "album/photo_update.html", {"image": image, "form": form})
 
 
 def search_image(request, category):

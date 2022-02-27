@@ -9,7 +9,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 def photos(request):
     images = Image.objects.all()
-    return render(request, "album/photos.html", {"images": images})
+    categories = Category.objects.all()
+    return render(request, "album/photos.html", {"images": images, "categories": categories})
 
 
 def save_image(request):

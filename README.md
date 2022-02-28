@@ -25,6 +25,7 @@ This is an application for adding different pitches
 * Django
 * Bootstrap
 * PostgreSQL
+* Cloudinary
 ## Support and contact details
 * If you get any issue contact mwamlandabarawa@gmail.com
 ### License

@@ -6,17 +6,18 @@
 
 <div class="user-repo">
      <p class="heading">{{image.name}}</p>
-     <img class="image" src="{{ image.image.url}}" alt="post-pic">
+     <img class="image" id="img" src="{{ image.image.url}}" alt="post-pic">
            <p>{{image.description}}</p>
            <div id="other">
            </div>
           <span class="posted">Location: {{image.location}}</span>
           <span class="posted">Category: {{image.category}}</span>
           <button class="btn btn-secondary">Copy Image Link</button><br>
-          <a href="/update-image/{{image.id}}" class="btn btn-primary">Update</a>
-          <a href="/delete-image/{{image.id}}" class="btn btn-danger">Delete</a>
         </div>`
 
+<script src="{% static 'album/main.js' %}">
+
+</script>
 </body>
 </html>
 
